@@ -15,3 +15,13 @@
 ### la base de datos utilizada es sqlite la misma ya viene con la distribucion de python por lo que solo importamos para hacer uso de la misma
 
 `import sqlite3;`
+
+**El sistema posee un log in para entrar es necesario colocar el usuario y clave**
+
+**User :** `Luis`
+**Clave:** `123`
+
+
+
+
+
