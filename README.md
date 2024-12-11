@@ -4,7 +4,7 @@
 
 `python -m pip install ttkbootstrap` 
 
-### y luego se debe importar para hacer de la misma:
+### y luego se debe importar para hacer uso de la misma:
 
 `import ttkbootstrap as tb;`
 
