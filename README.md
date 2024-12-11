@@ -12,7 +12,7 @@
 
 `from tkinter import ttk,messagebox;*` 
 
-### la base de datos utilizada es sqlite la misma ya viene con la distribucion de python por lo que solo importamos para hacer uso de la misma
+### la base de datos utilizada es sqlite la misma ya viene con la distribucion de python por lo que solo importamos para usarla
 
 `import sqlite3;`
 
