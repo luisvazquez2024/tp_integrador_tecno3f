@@ -1,9 +1,10 @@
 from tkinter import *;
-from tkinter import ttk,messagebox;
+import tkinter as tk
+from tkinter import  ttk,messagebox;
 from productos import open_vista_producto
 import ttkbootstrap as tb;
 import sqlite3;
-
+from creacionDB import crear_tabla
 
 
 class Ventana(tb.Window):
@@ -407,5 +408,27 @@ class Ventana(tb.Window):
 						confirmacion = messagebox.askyesno("Confirmar Eliminación", f"¿Estás seguro de que deseas eliminar el usuario con ID {user_id}?")
 						if confirmacion:
 									self.delete_user(user_id)  # Llamada a la función independiente
-									self.mostrar_usuarios()  # Actualiza la lista de usuarios después de eliminar
-				
+									self.mostrar_usuarios()  # Actualiza la lista de usuarios después de elimina
+         
+def barrita_menu(root):  
+    barra = tk.Menu(root)
+    root.config(menu = barra, width = 300 , height = 300)
+    menu_inicio = tk.Menu(barra, tearoff=0)
+    menu_inicio2 = tk.Menu(barra, tearoff=0)
+
+    # niveles 
+    # #principal
+    barra.add_cascade(label='Inicio', menu = menu_inicio) 
+    barra.add_cascade(label='Consultas', menu = menu_inicio)  
+    barra.add_cascade(label='Acerca de..', menu = menu_inicio)  
+    barra.add_cascade(label='Ayuda', menu= menu_inicio2)  
+    
+    #submenu 
+    menu_inicio.add_command(label='Conectar DB', command= crear_tabla)  
+    menu_inicio.add_command(label='Desconectar DB')  
+    menu_inicio.add_command(label='Salir', command= root.destroy)
+
+    #submenu ayuda
+    menu_inicio2.add_command(label='Contactanos')  
+    menu_inicio2.add_command(label='lalala')  
+    menu_inicio2.add_command(label='ola komo stas')         
